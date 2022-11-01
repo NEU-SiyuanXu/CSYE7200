@@ -20,8 +20,7 @@ object Function {
     * @tparam R  the type of the result of function f
     * @return a value of R, wrapped in Try
     */
-  def map2[T1, T2, R](t1y: Try[T1], t2y: Try[T2])(f: (T1, T2) => R): Try[R] = ??? // TO BE IMPLEMENTED
-
+  def map2[T1, T2, R](t1y: Try[T1], t2y: Try[T2])(f: (T1, T2) => R): Try[R] = t1y flatMap(t1=> t2y map (t2 => f(t1,t2)))
 
   /**
     * The map3 function. Much like map2
@@ -36,7 +35,7 @@ object Function {
     * @tparam R  the type of the result of function f
     * @return a value of R, wrapped in Try
     */
-  def map3[T1, T2, T3, R](t1y: Try[T1], t2y: Try[T2], t3y: Try[T3])(f: (T1, T2, T3) => R): Try[R] = ??? // TO BE IMPLEMENTED
+  def map3[T1, T2, T3, R](t1y: Try[T1], t2y: Try[T2], t3y: Try[T3])(f: (T1, T2, T3) => R): Try[R] =  // TO BE IMPLEMENTED
 
   /**
     * You get the idea...
