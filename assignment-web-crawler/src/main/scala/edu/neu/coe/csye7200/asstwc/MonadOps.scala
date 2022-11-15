@@ -248,8 +248,8 @@ object MonadOps {
    * @return if xe is a Right(x) then Some(x) else None.
    */
   def asOption[X](xe: Either[Throwable, X]): Option[X] = xe match{
-    case Right(x) => Some(x)
-    case Left(_) => None
+    case Right(value) => Some(value)
+    case Left(e) => Option.empty
   }
 
   /**
