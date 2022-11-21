@@ -10,8 +10,8 @@ val scalaTestVersion = "3.2.3"
 
 libraryDependencies += "org.scalatest" %% "scalatest" % scalaTestVersion % "test"
 
-libraryDependencies += "org.apache.spark" %% "spark-core" % "3.0.1"
+libraryDependencies += "org.apache.spark" %% "spark-core" % "3.2.1"
 
-libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.0.1"
+libraryDependencies += "org.apache.spark" %% "spark-sql" % "3.2.1"
 
 parallelExecution in Test := false
